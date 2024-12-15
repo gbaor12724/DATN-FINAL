@@ -1,0 +1,311 @@
+/* Màu sắc Giáng sinh */
+:root {
+  --christmas-red: #C41E3A;
+  --christmas-green: #165B33;
+  --christmas-gold: #FFD700;
+  --christmas-cream: #F5F5F5;
+  --christmas-burgundy: #8B0000;
+  --snow-white: #FFFFFF;
+}
+
+/* Container chính với background pattern */
+.account-container {
+  max-width: 1264px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  background-color: var(--christmas-cream);
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><text x="0" y="15" font-size="15">❄</text></svg>');
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(196, 30, 58, 0.15);
+}
+
+/* Sidebar với họa tiết Giáng sinh */
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(196, 30, 58, 0.2);
+  border: 3px solid var(--christmas-gold);
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+    url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><text x="0" y="15" font-size="15">🎄</text></svg>');
+}
+
+.sidebar-header {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-bottom: 3px solid var(--christmas-red);
+  text-align: center;
+  background: linear-gradient(to right, var(--christmas-red), var(--christmas-burgundy));
+  border-radius: 8px;
+}
+
+.sidebar-header p {
+  color: var(--snow-white);
+  font-size: 1.3em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-family: inherit;
+}
+
+.sidebar-item {
+  padding: 12px 0;
+  margin: 8px 0;
+  position: relative;
+}
+
+.sidebar-item a {
+  color: var(--christmas-burgundy);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.sidebar-item a:hover {
+  background: linear-gradient(45deg, var(--christmas-red), var(--christmas-burgundy));
+  color: var(--snow-white);
+  transform: translateY(-2px);
+  border: 2px solid var(--christmas-gold);
+}
+
+/* Main Content với họa tiết Giáng sinh */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(196, 30, 58, 0.15);
+  border: 3px solid var(--christmas-gold);
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.97)),
+    url('data:image/svg+xml;utf8,<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg"><text x="0" y="20" font-size="20">🎅</text></svg>');
+}
+
+.main-content h1 {
+  color: var(--christmas-burgundy);
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.main-content h1::before,
+.main-content h1::after {
+  content: '🎄';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-content h1::before {
+  left: 20px;
+}
+
+.main-content h1::after {
+  right: 20px;
+}
+
+/* Avatar Container với hiệu ứng Giáng sinh */
+.avatar-container {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--christmas-red);
+  box-shadow: 0 0 20px var(--christmas-gold);
+  padding: 3px;
+  background: linear-gradient(45deg, var(--christmas-red), var(--christmas-burgundy));
+}
+
+.upload-avatar {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.upload-avatar button {
+  background: linear-gradient(45deg, var(--christmas-red), var(--christmas-burgundy));
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid var(--christmas-gold);
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.upload-avatar button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3);
+}
+
+/* Thông tin người dùng với style Giáng sinh */
+.nguoi-dung-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  padding: 25px;
+}
+
+.nguoi-dung-info p {
+  margin: 12px 0;
+  padding: 18px;
+  background-color: var(--christmas-cream);
+  border-radius: 10px;
+  border: 2px solid var(--christmas-gold);
+  box-shadow: 0 3px 10px rgba(196, 30, 58, 0.1);
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.nguoi-dung-info p:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(196, 30, 58, 0.2);
+}
+
+.nguoi-dung-info strong {
+  color: var(--christmas-burgundy);
+  min-width: 120px;
+  display: inline-block;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.nguoi-dung-info input {
+  padding: 10px;
+  border: 2px solid var(--christmas-red);
+  border-radius: 6px;
+  margin-left: 10px;
+  width: calc(100% - 130px);
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.nguoi-dung-info input:focus {
+  border-color: var(--christmas-gold);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  outline: none;
+}
+
+/* Password Change Form với theme Giáng sinh */
+.password-change-form {
+  background: linear-gradient(rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.97));
+  padding: 25px;
+  border-radius: 12px;
+  border: 3px solid var(--christmas-gold);
+  margin-top: 25px;
+  box-shadow: 0 5px 20px rgba(196, 30, 58, 0.15);
+}
+
+.password-change-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid var(--christmas-red);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.password-change-form button {
+  background: linear-gradient(45deg, var(--christmas-red), var(--christmas-burgundy));
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--christmas-gold);
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.password-change-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .account-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .nguoi-dung-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Error Message */
+.error {
+  color: var(--christmas-red);
+  background-color: rgba(196, 30, 58, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Thêm style cho các tiêu đề h3 */
+h3 {
+  text-align: center;
+  padding-top: 50px;
+  color: var(--christmas-burgundy);
+}
+
+/* Style cho text thường */
+p, .sidebar-item a, .nguoi-dung-info strong, input, button {
+  font-family: inherit; /* Sử dụng font mặc định của trang */
+}
+
+/* Style cho header */
+.sidebar-header p {
+  color: var(--snow-white);
+  font-size: 1.3em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-family: inherit;
+}
+
+/* Style cho các tiêu đề section */
+.section-title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.section-title hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid black;
+  margin: 0 10px;
+}
+
+.section-title h3 {
+  padding-top: 0;
+}

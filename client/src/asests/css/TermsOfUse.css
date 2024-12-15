@@ -1,0 +1,26 @@
+.container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  ul, ol {
+    margin-left: 20px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  footer p {
+    color: #888;
+  }
+  

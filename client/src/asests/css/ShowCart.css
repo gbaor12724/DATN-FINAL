@@ -1,0 +1,209 @@
+/* ShowCart.css */
+.container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#giohang {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+#giohang h2 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#giohang p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+}
+
+#cart {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+#cart thead {
+    background: #2c3e50;
+    color: white;
+    font-weight: 600;
+}
+
+#cart th {
+    padding: 18px 15px;
+    font-weight: 600;
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid #34495e;
+}
+
+#cart thead tr:hover {
+    background: #34495e;
+}
+
+#cart th:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#cart thead th {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#cart thead {
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+}
+
+#cart tbody tr {
+    transition: all 0.3s ease;
+}
+
+#cart tbody tr:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+.imgcard {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.imgcard:hover {
+    transform: scale(1.05);
+}
+
+h4 {
+    color: #2c3e50;
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    padding: 8px;
+    width: 80px;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-warning {
+    background: #f1c40f;
+    border: none;
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background: #f39c12;
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: #2ecc71;
+    border: none;
+}
+
+.btn-success:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background: #e74c3c;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+tfoot {
+    background: #f8f9fa;
+}
+
+tfoot tr td {
+    padding: 20px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.text-center strong {
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 10px;
+    }
+    
+    .imgcard {
+        width: 80px;
+        height: 80px;
+    }
+    
+    h4 {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    #cart th {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#cart {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}

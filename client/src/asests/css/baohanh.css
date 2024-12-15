@@ -1,0 +1,223 @@
+/* Căn giữa nội dung tất cả các thẻ h3 */
+h3 {
+    text-align: center;
+    margin-bottom: 20px; /* Thêm khoảng cách giữa các thẻ h3 và phần tử bên dưới */
+}
+
+/* Căn giữa tất cả các đoạn văn và mục list */
+p, ul {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Đảm bảo các thẻ <h1> và <h2> không bị lệch */
+h1, h2 {
+    text-align: center;
+}
+
+/* Định dạng cho container chính */
+.warranty-policy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.warranty-policy-container h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.warranty-policy-container h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+}
+
+.warranty-policy-container h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 40px 0 20px;
+}
+
+.warranty-policy-container h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin: 30px 0 15px;
+    padding-left: 15px;
+    border-left: 4px solid #4ecdc4;
+}
+
+.warranty-policy-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.warranty-policy-container img {
+    max-width: 600px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.warranty-policy-container img:hover {
+    transform: scale(1.02);
+}
+
+.warranty-policy-container ul {
+    background: #f8f9fa;
+    padding: 20px 40px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.warranty-policy-container li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.warranty-policy-container li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4ecdc4;
+    font-weight: bold;
+}
+
+/* Card style sections */
+.warranty-policy-container h3 {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-top: 40px;
+    border-left: 4px solid #4ecdc4;
+    transition: transform 0.3s ease;
+}
+
+.warranty-policy-container h3:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .warranty-policy-container {
+        padding: 20px;
+    }
+
+    .warranty-policy-container h1 {
+        font-size: 2rem;
+    }
+
+    .warranty-policy-container h2 {
+        font-size: 1.75rem;
+    }
+
+    .warranty-policy-container h3 {
+        font-size: 1.3rem;
+    }
+
+    .warranty-policy-container p {
+        font-size: 1rem;
+    }
+
+    .warranty-policy-container img {
+        max-width: 100%;
+    }
+}
+
+/* Animation for content loading */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.warranty-policy-container > * {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Hover effects for interactive elements */
+.warranty-policy-container ul li:hover {
+    color: #4ecdc4;
+    cursor: pointer;
+}
+
+/* Print styles */
+@media print {
+    .warranty-policy-container {
+        padding: 0;
+    }
+    
+    .warranty-policy-container img {
+        max-width: 500px;
+    }
+}
+
+/* Thêm vào file baohanh.css */
+
+.warranty-intro {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: #d4a556;
+    font-size: 18px;
+}
+
+.contact-section {
+    background: #f5f5f5;
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+.contact-section p {
+    margin-bottom: 0;
+}
+
+/* Style cho bảng giá */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f5f5f5;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

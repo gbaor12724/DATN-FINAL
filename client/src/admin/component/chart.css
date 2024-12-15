@@ -1,0 +1,44 @@
+/* custom.css */
+
+/* Nền cho toàn bộ biểu đồ */
+.recharts-responsive-container {
+   background-color: #f0f0f0; /* Màu nền nhẹ */
+ }
+ 
+ /* Nền lưới */
+ .recharts-cartesian-grid-line {
+   stroke: rgba(0, 0, 0, 0.2); /* Lưới màu đen mờ */
+ }
+ 
+ /* Các đường trục X và Y */
+ .recharts-axis-line {
+   stroke: #333; /* Màu trục đen */
+ }
+ 
+ /* Màu cho tooltip */
+ .recharts-tooltip-item {
+   color: #333; /* Màu chữ Tooltip đen */
+ }
+ 
+ /* Màu chữ cho Legend */
+ .recharts-legend-item {
+   color: #333; /* Màu chữ của các mục trong Legend */
+ }
+ 
+ /* Biểu đồ cột */
+ .recharts-bar-rect {
+   fill: #6f6f6f; /* Màu xám cho cột */
+   opacity: 0.8; /* Độ mờ của cột */
+ }
+ 
+ /* Biểu đồ đường */
+ .recharts-line {
+   stroke: #ff4500; /* Màu cam sinh động cho đường */
+   stroke-width: 2px; /* Độ dày đường */
+ }
+ 
+ /* Biểu đồ khu vực */
+ .recharts-area {
+   fill: rgba(0, 0, 0, 0.1); /* Màu nền khu vực là đen mờ */
+ }
+ 

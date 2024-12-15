@@ -1,0 +1,170 @@
+/* General Carousel Container */
+.top-brands-carousel {
+    padding: 40px 20px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .top-brands-carousel h2 {
+    text-align: center;
+    color: #1a472a;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Hiệu ứng tuyết rơi cho tiêu đề */
+  .top-brands-carousel h2::after {
+    content: "🎄";
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .top-brands-carousel h2::before {
+    content: "🎄";
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Carousel Slide Styling */
+  .brand-slide {
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    height: 280px;
+  }
+  
+  .brand-slide:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Container cho ảnh */
+  .brand-image-container {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+  }
+  
+  /* Styling the brand images */
+  .brand-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #c41e3a; /* Màu đỏ Giáng sinh */
+  }
+  
+  /* Brand Name Styling */
+  .brand-slide p {
+    color: #1a472a;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+  }
+  
+  /* Nút điều hướng */
+  .slick-prev, .slick-next {
+    background: #c41e3a !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    display: none !important;
+  }
+  
+  .slick-prev:hover, .slick-next:hover {
+    background: #8b0000 !important;
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    font-size: 24px;
+  }
+  
+  /* Dots */
+  .slick-dots {
+    bottom: -30px;
+  }
+  
+  .slick-dots li button:before {
+    color: #1a472a !important;
+    font-size: 12px;
+    opacity: 0.5;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #c41e3a !important;
+    opacity: 1;
+  }
+  
+  /* Hiệu ứng tuyết rơi */
+  .top-brands-carousel::before {
+    content: "❄";
+    position: absolute;
+    animation: snowfall 10s linear infinite;
+    color: white;
+    font-size: 20px;
+    opacity: 0.7;
+  }
+  
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-100%) rotate(0deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Responsive Design for different screen sizes */
+  @media (max-width: 768px) {
+    .brand-image-container {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .top-brands-carousel h2 {
+      font-size: 2rem;
+    }
+
+    .brand-slide p {
+      font-size: 1rem;
+    }
+
+    .brand-slide {
+      height: 230px;
+    }
+  }
+  
+  /* Thêm style cho cursor khi hover vào carousel */
+  .top-brands-carousel .slick-list {
+    cursor: grab;
+  }
+  
+  .top-brands-carousel .slick-list:active {
+    cursor: grabbing;
+  }
+  

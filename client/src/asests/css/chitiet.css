@@ -1,0 +1,195 @@
+/* Chitiet.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Product Gallery */
+.slider-container {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.slider-container:hover {
+  transform: translateY(-5px);
+}
+
+.slider img {
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.slider img:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation buttons */
+.navigation button {
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navigation button:hover {
+  background: rgba(0,0,0,0.8);
+  transform: scale(1.1);
+}
+
+/* Product Details */
+.product-details {
+  padding: 20px;
+}
+
+.product-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.price-section {
+  background: linear-gradient(135deg, #f6f8f9 0%, #e5ebee 100%);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.original-price {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.sale-price {
+  color: #e74c3c;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Features Section */
+.chi-tiet {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+.chi-tiet p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  color: #555;
+}
+
+.chi-tiet i {
+  margin-right: 10px;
+  color: #3498db;
+}
+
+/* Action Buttons */
+.tragop {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tragop button {
+  flex: 1;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tragop button:first-child {
+  background: #3498db;
+  color: white;
+}
+
+.tragop button:last-child {
+  background: #e74c3c;
+  color: white;
+}
+
+.tragop button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Related Products */
+.related-products {
+  margin-top: 50px;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.pagination a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f8f9fa;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.pagination a:hover,
+.pagination a.active {
+  background: #3498db;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .tragop {
+    flex-direction: column;
+  }
+  
+  .product-title {
+    font-size: 1.5rem;
+  }
+}

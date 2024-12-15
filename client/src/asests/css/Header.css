@@ -1,0 +1,809 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffffff, #f8f9fa) !important;
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo */
+.navbar-brand {
+    padding: 15px 0;
+    margin: 0;
+}
+
+.navbar-brand img {
+    min-width: 250px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    transition: all 0.3s ease;
+    display: block;
+    object-fit: contain;
+}
+
+/* Navbar items */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 5px;
+    position: relative;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 0.8rem 1rem !important;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+}
+
+.nav-link:hover {
+    color: #ff6b6b !important;
+    background-color: rgba(255, 107, 107, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Form tìm kiếm */
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ebebeb;
+    width: 100%;
+    max-width: 500px; /* Giới hạn chiều rộng */
+    margin: 0 auto; /* Căn giữa */
+}
+
+/* Input */
+.d-flex input {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.d-flex input:focus {
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(242, 169, 0, 0.5);
+}
+
+/* Nút tìm kiếm */
+.d-flex button {
+    background-color: #f2a900; /* Màu vàng nhấn mạnh */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.d-flex button:hover {
+    background-color: #e17b00;
+    transform: scale(1.1);
+}
+
+/* Icon search */
+.d-flex button i {
+    font-size: 18px;
+}
+
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none; /* Ẩn navbar menu trên màn hình nhỏ */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar-nav.active {
+        display: flex; /* Hiển thị khi menu dropdown mở */
+    }
+
+    .navbar-brand img {
+        width: 200px;
+        height: auto;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+    background-color: #252525;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .navbar-nav .nav-link {
+    color: #f1f1f1;
+}
+
+body.dark-mode .navbar-nav .nav-link:hover {
+    color: #f2c046;
+}
+
+body.dark-mode .search-bar {
+    background-color: #333;
+    border-color: #444;
+}
+
+body.dark-mode .search-bar input {
+    background-color: #444;
+    color: #f1f1f1;
+}
+
+body.dark-mode .search-bar button {
+    background-color: #f2a900;
+    color: white;
+}
+
+/* Footer and other elements */
+body.dark-mode .footer {
+    background-color: #151515;
+    color: #7a7a7a;
+}
+
+/* Modern Header Styles */
+.navbar {
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffffff, #f8f9fa) !important;
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo container */
+.navbar-brand {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation items */
+.navbar-nav .nav-item {
+    margin: 0 5px;
+    position: relative;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 0.8rem 1rem !important;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+}
+
+.nav-link:hover {
+    color: #ff6b6b !important;
+    background-color: rgba(255, 107, 107, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Search form */
+form.d-flex input {
+    border-radius: 25px;
+    border: 2px solid #eee;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+    width: 300px;
+}
+
+form.d-flex input:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 107, 0.25);
+}
+
+form.d-flex button {
+    border-radius: 25px;
+    background-color: #ff6b6b;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+form.d-flex button:hover {
+    background-color: #ff5252;
+    transform: scale(1.05);
+}
+
+/* Dropdown menu */
+.dropdown-toggle {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    color: #ff6b6b;
+    background-color: rgba(255, 107, 107, 0.1);
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.dropdown-menu li a {
+    padding: 0.8rem 1.5rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 107, 107, 0.1);
+    color: #ff6b6b;
+}
+
+/* Cart and Favorite buttons */
+.nav-link i, .nav-link .fa-cart-shopping {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+/* Dark mode toggle */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .navbar {
+    background: linear-gradient(135deg, #2d2d2d, #1a1a1a) !important;
+}
+
+.dark-mode .nav-link {
+    color: #ffffff !important;
+}
+
+.dark-mode .dropdown-toggle {
+    color: #ffffff;
+}
+
+.dark-mode .dropdown-menu {
+    background-color: #2d2d2d;
+}
+
+.dark-mode .dropdown-menu li a {
+    color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    form.d-flex input {
+        width: 100%;
+    }
+    
+    .nav-link {
+        text-align: center;
+    }
+}
+
+/* Animation for notifications */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Toastify__toast {
+    animation: fadeIn 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Custom button styles */
+.btn-outline-danger {
+    border-radius: 25px;
+    border: 2px solid #ff6b6b;
+    color: #ff6b6b;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+    background-color: #ff6b6b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+}
+
+.dropdown-toggle {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+}
+
+.navbar-nav button {
+    font-size: 0.9rem;
+}
+
+.nav-icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-icon-text {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+.nav-icon-container:hover .nav-icon-text {
+    display: block;
+}
+
+/* Header.css */
+.navbar {
+    background: linear-gradient(to right, #1a472a, #2d5a3f) !important;
+    padding: 15px 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 15px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ff4444 !important;
+    transform: translateY(-2px);
+}
+
+/* Hiệu ứng tuyết rơi cho nav items */
+.nav-link::before {
+    content: "❄";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.nav-link:hover::before {
+    opacity: 1;
+    top: -15px;
+}
+
+/* Style cho dropdown */
+.dropdown-menu {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu a {
+    color: #2d5a3f;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background: #1a472a;
+    color: #fff;
+}
+
+/* Style cho icons */
+.nav-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon-container .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-icon-text {
+    font-size: 0.8rem;
+    margin-top: 2px;
+}
+
+/* Nút search */
+.btn-primary {
+    background-color: #c41e3a !important;
+    border-color: #c41e3a !important;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #a01830 !important;
+    transform: scale(1.05);
+}
+
+/* Dark mode styles */
+.dark-mode .navbar {
+    background: linear-gradient(to right, #0a1f14, #1a2f20) !important;
+}
+
+.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #e0e0e0 !important;
+}
+
+/* Christmas decorations */
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        #c41e3a 25%, 
+        #1a472a 25%, 
+        #1a472a 50%, 
+        #c41e3a 50%, 
+        #c41e3a 75%, 
+        #1a472a 75%);
+}
+
+/* Logo container */
+.navbar-brand {
+    position: relative;
+}
+
+.navbar-brand::after {
+    content: "🎄";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+
+/* Search form styling */
+.search-form input {
+    border-radius: 20px;
+    border: 2px solid #1a472a;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.search-form input:focus {
+    box-shadow: 0 0 10px rgba(196, 30, 58, 0.3);
+    border-color: #c41e3a;
+}
+
+/* Buttons */
+.btn-outline-danger {
+    color: #fff !important;
+    border-color: #c41e3a !important;
+    background: transparent;
+}
+
+.btn-outline-danger:hover {
+    background-color: #c41e3a !important;
+    transform: scale(1.05);
+}
+
+/* Thêm vào file CSS */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    animation: fadeInDown 0.5s ease-out;
+}
+
+.nav-item {
+    animation: fadeInDown 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+.nav-item:nth-child(1) { animation-delay: 0.1s; }
+.nav-item:nth-child(2) { animation-delay: 0.2s; }
+.nav-item:nth-child(3) { animation-delay: 0.3s; }
+/* và tiếp tục cho các items khác */
+
+:root {
+    --christmas-green: #165b33;
+    --christmas-red: #C41E3A;
+    --christmas-gold: #d4af37;
+    --christmas-white: #f8f9fa;
+}
+
+.navbar {
+    background: linear-gradient(135deg, var(--christmas-green), #1a472a) !important;
+    border-bottom: 3px solid var(--christmas-red);
+}
+
+/* Logo styling */
+.navbar-brand img {
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
+}
+
+/* Navigation links */
+.navbar-light .navbar-nav .nav-link {
+    color: var(--christmas-white) !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--christmas-gold) !important;
+    background: rgba(212, 175, 55, 0.1);
+}
+
+/* Search button */
+.btn-primary {
+    background-color: var(--christmas-red) !important;
+    border-color: var(--christmas-red) !important;
+}
+
+.btn-primary:hover {
+    background-color: #a01830 !important;
+    box-shadow: 0 0 10px rgba(196, 30, 58, 0.5);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    background: rgba(22, 91, 51, 0.95);
+    border: 1px solid var(--christmas-gold);
+}
+
+.dropdown-menu a {
+    color: var(--christmas-white) !important;
+}
+
+.dropdown-menu a:hover {
+    background: var(--christmas-red);
+    color: var(--christmas-white) !important;
+}
+
+/* Icons */
+.nav-icon-container .nav-link {
+    color: var(--christmas-white) !important;
+}
+
+.nav-icon-container:hover .nav-link {
+    color: var(--christmas-gold) !important;
+}
+
+/* Buttons */
+.btn-outline-danger {
+    color: var(--christmas-white) !important;
+    border-color: var(--christmas-red) !important;
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--christmas-red) !important;
+    border-color: var(--christmas-red) !important;
+}
+
+/* Search form */
+.search-form input {
+    border: 2px solid var(--christmas-gold);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.search-form input:focus {
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+    border-color: var(--christmas-gold);
+}
+
+/* Dark mode */
+.dark-mode .navbar {
+    background: linear-gradient(135deg, #0a2615, #133926) !important;
+}
+
+/* Christmas decorations */
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--christmas-red),
+        var(--christmas-red) 10px,
+        var(--christmas-green) 10px,
+        var(--christmas-green) 20px
+    );
+}
+
+/* Add festive icons */
+.nav-link::after {
+    content: "🎄";
+    margin-left: 5px;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+/* Sparkle effect */
+@keyframes sparkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.navbar-brand::before,
+.navbar-brand::after {
+    content: "✨";
+    position: absolute;
+    animation: sparkle 2s infinite;
+}
+
+.navbar-brand::before {
+    left: -20px;
+    top: 0;
+}
+
+.navbar-brand::after {
+    right: -20px;
+    bottom: 0;
+}
+
+/* Hover effects */
+.nav-link:hover {
+    text-shadow: 0 0 5px var(--christmas-gold);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+@keyframes twinkle {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.christmas-header {
+    animation: twinkle 2s infinite;
+    color: var(--christmas-primary);
+    text-shadow: 0 0 5px var(--christmas-gold);
+}
+
+/* Style cho các tiêu đề chính */
+h3 {
+    color: var(--christmas-green);
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Style cho phần gạch ngang bên cạnh tiêu đề */
+h3::before,
+h3::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 50px;
+    background: var(--christmas-red);
+    margin: 0 15px;
+    vertical-align: middle;
+}
+
+/* Container cho tiêu đề */
+.section-title {
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* Style cho text thường */
+p {
+    color: var(--christmas-green);
+}
+
+/* Style cho links */
+a {
+    color: var(--christmas-green);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--christmas-red);
+}
+
+/* Style cho buttons */
+button {
+    background-color: var(--christmas-green);
+    color: var(--christmas-white);
+    border: none;
+}
+
+button:hover {
+    background-color: var(--christmas-red);
+}
+
+/* Style cho navigation */
+.nav-link {
+    color: var(--christmas-green) !important;
+}
+
+.nav-link:hover {
+    color: var(--christmas-red) !important;
+}

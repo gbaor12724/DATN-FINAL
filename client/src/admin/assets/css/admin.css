@@ -1,0 +1,150 @@
+/* Hiển thị sản phẩm theo dạng grid với 5 cột */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cột */
+  gap: 20px; /* Khoảng cách giữa các sản phẩm */
+  margin-top: 20px;
+  width: 100%;
+  justify-items: center;
+}
+
+/* Style cho từng sản phẩm */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 250px; /* Kích thước cố định cho mỗi sản phẩm */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổi bóng đổ để sản phẩm nổi bật hơn */
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Thêm hiệu ứng thay đổi bóng đổ */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Hiệu ứng khi hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bóng đổ nổi bật hơn khi hover */
+}
+
+/* Hình ảnh sản phẩm */
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: opacity 0.3s ease; /* Thêm hiệu ứng mờ khi hover */
+}
+
+.product-card:hover img {
+  opacity: 0.8; /* Hình ảnh mờ đi khi hover */
+}
+
+/* Tên và giá sản phẩm */
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: bold; /* Đậm tiêu đề sản phẩm */
+}
+
+.product-card .price {
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1.1rem; /* Tăng kích thước giá sản phẩm */
+}
+
+/* Nút hành động */
+.product-card .btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-card .btn-info {
+  background-color: #3f4546;
+  color: white;
+}
+
+.product-card .btn-info:hover {
+  background-color: #585a5b;
+  transform: translateY(-2px); /* Hiệu ứng di chuyển nút lên khi hover */
+}
+
+.product-card .btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.product-card .btn-danger:hover {
+  background-color: #c82333;
+  transform: translateY(-2px); /* Hiệu ứng di chuyển nút lên khi hover */
+}
+
+/* Ẩn các phần không liên quan khi đang sửa sản phẩm */
+.product-management {
+  display: block;
+}
+
+.product-management.hidden {
+  display: none;
+}
+
+/* Form chỉnh sửa sản phẩm */
+.edit-product-form {
+  margin-top: 30px;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bóng đổ mịn */
+}
+
+.edit-product-form input,
+.edit-product-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease; /* Hiệu ứng chuyển màu viền khi focus */
+}
+
+.edit-product-form input:focus,
+.edit-product-form textarea:focus {
+  border-color: #007bff; /* Viền màu xanh khi focus */
+}
+
+/* Nút submit và cancel */
+.edit-product-form button {
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.edit-product-form button:hover {
+  background-color: #218838;
+}
+
+.edit-product-form .cancel-btn {
+  background-color: #dc3545;
+}
+
+.edit-product-form .cancel-btn:hover {
+  background-color: #c82333;
+}
+
+/* Căn giữa tiêu đề "Sửa sản phẩm" */
+.edit-product-form h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #2c3e50; /* Màu chữ tối để dễ nhìn */
+}

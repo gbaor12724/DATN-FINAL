@@ -1,0 +1,326 @@
+/* Container chính */
+.thanhtoan-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.thanhtoan-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+/* Cột thông tin bên trái */
+.thanhtoan-left {
+    flex: 1 1 45%;
+    margin-right: 20px;
+}
+
+/* Cột giỏ hàng bên phải */
+.thanhtoan-right {
+    flex: 1 1 45%;
+    max-width: 450px;
+    padding: 20px;
+    border-left: 2px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Các trường thông tin khách hàng */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+/* Các input sẽ có chiều rộng bằng nhau */
+input[type="text"],
+input[type="email"],
+select {
+    min-width: 250px;
+}
+
+/* Định dạng cho textarea */
+textarea {
+    min-height: 100px;
+}
+
+/* Tạo khung cho các trường thông tin */
+.thanhtoan-left label {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Giỏ hàng */
+.cart-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item-info {
+    margin-left: 15px;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.cart-summary {
+    margin-top: 30px;
+}
+
+/* Các tùy chọn thanh toán */
+.payment-options {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.payment-options label {
+    display: block;
+    margin-bottom: 10px;
+}
+/* Nút đặt hàng với màu nâu luxury */
+button[type="submit"] {
+    background-color: #7f4e1e; /* Màu nâu sang trọng */
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+/* Hiệu ứng hover với màu nâu đậm hơn */
+button[type="submit"]:hover {
+    background-color: #6b4214; /* Màu nâu đậm hơn khi hover */
+}
+
+
+/* Điều chỉnh khoảng cách */
+@media (max-width: 768px) {
+    .thanhtoan-form {
+        flex-direction: column;
+    }
+
+    .thanhtoan-left,
+    .thanhtoan-right {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+
+    button[type="submit"] {
+        width: auto;
+    }
+}
+
+/* Đảm bảo các trường nhập liệu đồng đều từ trên xuống dưới */
+.thanhtoan-left label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Các trường input, textarea, select có chiều rộng đầy đủ */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    /* Đảm bảo các trường chiếm toàn bộ chiều rộng */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    /* Đảm bảo padding không làm thay đổi kích thước của phần tử */
+    background-color: #f9f9f9;
+}
+
+/* Tạo khung cho các trường thông tin */
+.thanhtoan-left label {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+/* Cải thiện độ rộng của các trường nhập liệu */
+input[type="text"],
+input[type="email"],
+select {
+    min-width: 250px;
+}
+
+/* Đảm bảo các trường nhập liệu không bị lệch nhau */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+/* Các trường nhập liệu với chiều rộng đồng đều */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    display: block;
+    /* Đảm bảo các trường chiếm chiều rộng đầy đủ */
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Điều chỉnh độ rộng và căn chỉnh cho các trường nhập liệu */
+label input,
+label select,
+label textarea {
+    width: 100%;
+    /* Chiều rộng toàn bộ */
+    padding: 12px;
+    font-size: 14px;
+}
+
+/* Thêm khung cho các trường nhập */
+.thanhtoan-left label {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: flex-start; /* Căn lề các phần tử từ trái sang phải */
+    flex-wrap: wrap; /* Nếu không đủ chỗ, các phần tử sẽ xuống dòng */
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+.payment-options label {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử trong label */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    font-size: 14px; /* Kích thước chữ */
+}
+
+.payment-options input[type="radio"] {
+    margin-right: 10px; /* Khoảng cách giữa radio button và chữ */
+}
+.thanhtoan-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.thanhtoan-left, .thanhtoan-right {
+    width: 48%;
+}
+
+.thanhtoan-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f4f4f4;
+}
+
+.table td {
+    font-size: 14px;
+}
+
+.payment-options label {
+    display: block;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}

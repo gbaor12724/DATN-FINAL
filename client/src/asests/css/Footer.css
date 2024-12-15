@@ -1,0 +1,133 @@
+.footer {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 60px 0 20px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-main {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo-section {
+    flex: 0 0 300px;
+}
+
+.footer-logo-section .logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.company-description {
+    color: #666666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.footer-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-info-section {
+    flex: 1;
+}
+
+.footer-info-section h3 {
+    color: #333333;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+}
+
+.footer-info-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 40px;
+    height: 2px;
+    background-color: #c41e3a;
+}
+
+.footer-info-section p {
+    color: #666666;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-info-section .hotline {
+    color: #c41e3a;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-info-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-info-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-info-section ul li a {
+    color: #666666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-info-section ul li a:hover {
+    color: #c41e3a;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #999999;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-main {
+        flex-direction: column;
+    }
+
+    .footer-logo-section {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-info-section {
+        text-align: center;
+    }
+
+    .footer-info-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

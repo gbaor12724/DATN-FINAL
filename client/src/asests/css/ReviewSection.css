@@ -1,0 +1,240 @@
+.review-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.review-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2B6CB0;
+    position: relative;
+}
+
+.review-header:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #4299E1, #48BB78);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.review-form-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E2E8F0;
+}
+
+.review-input {
+    width: 100%;
+    min-height: 120px;
+    padding: 16px;
+    border: 2px solid #E2E8F0;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    resize: vertical;
+    background: #ffffff;
+    color: #2D3748;
+}
+
+.review-input:focus {
+    border-color: #4299E1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+    outline: none;
+}
+
+.review-submit-btn {
+    background: linear-gradient(90deg, #4299E1, #48BB78);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.review-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(66, 153, 225, 0.25);
+}
+
+.review-error {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(231, 76, 60, 0.1);
+    border: 1px solid rgba(231, 76, 60, 0.2);
+    font-weight: 500;
+}
+
+.reviews-list {
+    display: grid;
+    gap: 25px;
+    padding: 10px;
+}
+
+.review-item {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #4299E1;
+    transition: all 0.3s ease;
+}
+
+.review-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(52, 152, 219, 0.05), rgba(46, 204, 113, 0.05));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.review-item:hover::before {
+    opacity: 1;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.review-user strong {
+    color: #4299E1;
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.review-content {
+    display: flex;
+    margin: 16px 0;
+}
+
+.review-content strong {
+    color: #4299E1;
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.review-date {
+    text-align: right;
+    color: #718096;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+    .review-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .review-header {
+        font-size: 2rem;
+    }
+
+    .review-submit-btn {
+        width: 100%;
+        padding: 12px 25px;
+    }
+
+    .review-item {
+        padding: 20px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review-item {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.reviews-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.reviews-list::-webkit-scrollbar-track {
+    background: #EDF2F7;
+    border-radius: 4px;
+}
+
+.reviews-list::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4299E1, #48BB78);
+    border-radius: 4px;
+}
+
+.reviews-list::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #2ecc71, #3498db);
+}
+
+/* Thêm hiệu ứng ripple cho nút submit */
+.review-submit-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.review-submit-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.review-submit-btn:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Label styles */
+.review-label {
+    font-weight: 600;
+    color: #4299E1;
+    margin-right: 8px;
+}

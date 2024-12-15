@@ -1,0 +1,50 @@
+/* Toàn bộ vùng chứa biểu đồ */
+.chart-container {
+    background-color: #ffffff; /* Nền trắng */
+    border: 1px solid #e0e0e0; /* Viền màu xám nhạt */
+    border-radius: 10px; /* Góc bo tròn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    padding: 16px; /* Khoảng cách bên trong */
+    margin: 20px auto; /* Khoảng cách ngoài */
+    max-width: 80%; /* Độ rộng tối đa */
+  }
+  
+  /* Chữ trục X và Y */
+  .chart-container .recharts-cartesian-axis-tick text {
+    font-family: 'Roboto', sans-serif; /* Font chữ hiện đại */
+    font-size: 12px; /* Kích thước chữ nhỏ */
+    fill: #666666; /* Màu chữ xám đậm */
+  }
+  
+  /* Các đường lưới */
+  .chart-container .recharts-cartesian-grid-line {
+    stroke: #e0e0e0; /* Màu xám nhạt */
+  }
+  
+  /* Tooltip */
+  .chart-container .recharts-tooltip-wrapper {
+    background-color: #f9f9f9; /* Nền xám nhạt */
+    border: 1px solid #d1d1d1; /* Viền xám nhạt */
+    border-radius: 5px; /* Góc bo tròn */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    font-family: 'Roboto', sans-serif; /* Font chữ hiện đại */
+    font-size: 12px; /* Kích thước chữ nhỏ */
+  }
+  
+  /* Thanh biểu đồ */
+  .chart-container .recharts-bar-rectangle {
+    fill: #4caf50; /* Màu xanh lá */
+  }
+  
+  /* Thanh hover */
+  .chart-container .recharts-bar-rectangle:hover {
+    fill: #2e7d32; /* Màu xanh đậm hơn khi hover */
+  }
+  
+  /* Legend */
+  .chart-container .recharts-legend-item text {
+    font-family: 'Roboto', sans-serif; /* Font chữ hiện đại */
+    font-size: 14px; /* Kích thước chữ vừa */
+    color: #333; /* Màu chữ đen nhạt */
+  }
+  
