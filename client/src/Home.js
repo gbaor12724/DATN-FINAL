@@ -164,7 +164,7 @@ function Home() {
                         {truncateText(product.ten_san_pham, 100)}
                     </p>
                     <p className="product-price" style={{ textAlign: 'left' }}>
-                        GIÁ G���C: <span style={{ textDecoration: 'line-through', color: 'black' }}>
+                        GIÁ GỐC: <span style={{ textDecoration: 'line-through', color: 'black' }}>
                             {Number(product.Gia).toLocaleString('vi-VN')} VNĐ
                         </span>
                         <br />

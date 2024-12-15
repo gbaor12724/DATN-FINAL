@@ -69,12 +69,21 @@ function ShowCart() {
                             </td>
                             <td>{Number(sp.Gia).toLocaleString('vi')} VNĐ</td>
                             <td>
-                                <input
-                                    type="number"
-                                    className="form-control text-center"
-                                    value={sp.so_luong}
-                                    onChange={e => updateQuantity(sp.ma_san_pham, Number(e.target.value))}
-                                />
+                                <div className="quantity-controls">
+                                    <button 
+                                        className="btn btn-secondary btn-sm"
+                                        onClick={() => updateQuantity(sp.ma_san_pham, Math.max(0, sp.so_luong - 1))}
+                                    >
+                                        -
+                                    </button>
+                                    <span className="quantity-display">{sp.so_luong}</span>
+                                    <button 
+                                        className="btn btn-secondary btn-sm"
+                                        onClick={() => updateQuantity(sp.ma_san_pham, sp.so_luong + 1)}
+                                    >
+                                        +
+                                    </button>
+                                </div>
                             </td>
                             <td className="text-center">
                                 {(Number(sp.Gia) * sp.so_luong).toLocaleString('vi')} VNĐ

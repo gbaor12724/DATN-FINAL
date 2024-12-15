@@ -680,3 +680,24 @@ hr {
   justify-content: center;
   margin-top: 20px;
 }
+
+.thong-so-wrapper {
+    padding: 40px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.spec-item {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.spec-item span:first-child {
+    width: 150px;
+    color: #666;
+}
+
+.spec-item span:last-child {
+    flex: 1;
+}

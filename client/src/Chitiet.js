@@ -178,47 +178,110 @@ function Chitiet() {
                 </table>
             </div>
             <div className="container">
-                <div className="bg-table">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td width="5%"></td>
-                                <td width="30%"><p><strong>Thông số kỹ thuật</strong></p></td>
-                                <td width="30%"></td>
-                                <td width="5%"></td>
-                                <td width="40%"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td className="chi-tiet-1">
-                                    <p><strong>Bảo hành chính hãng</strong></p>
-                                    <p><strong>Chống nước</strong></p>
-                                    <p><strong>Dạng mặt số</strong></p>
-                                    <p><strong>Giới tính</strong></p>
-                                    <p><strong>Loại dây</strong></p>
-                                    <p><strong>Loại máy</strong></p>
-                                    <p><strong>Size mặt số</strong></p>
-                                    <p><strong>Thương hiệu</strong></p>
-                                    <p><strong>Xuất xứ</strong></p>
-                                </td>
-                                <td className="chi-tiet-2">
-                                    <p>{product.bao_hanh || 'Quốc tế 1 năm'}</p>
-                                    <p>{product.chong_nuoc || '10 ATM (100m)'}</p>
-                                    <p>{product.dang_mat_so || 'Vuông'}</p>
-                                    <p>{product.nam_nu || 'Nữ'}</p>
-                                    <p>{product.loai_day || 'Dây Inox (Thép không gỉ)'}</p>
-                                    <p>{product.loai_may || 'Pin (Quartz)'}</p>
-                                    <p>{product.size_mat_so || '45 mm'}</p>
-                                    <p>{product.thuong_hieu || 'Casio'}</p>
-                                    <p>{product.xuat_xu || 'Nhật Bản'}</p>
-                                </td>
-                                <td></td>
-                                <td>
-                                    <img src={baohanh} width="500" height="550" alt="Warranty" />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div className="thong-so-wrapper" style={{
+                    padding: '40px',
+                    backgroundColor: '#f8f8f8',
+                    borderRadius: '8px'
+                }}>
+                    <h2 style={{
+                        textAlign: 'center',
+                        marginBottom: '40px',
+                        fontSize: '24px',
+                        letterSpacing: '2px'
+                    }}>THÔNG SỐ</h2>
+                    
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: '1fr 1fr',
+                        gap: '20px',
+                        maxWidth: '1000px',
+                        margin: '0 auto'
+                    }}>
+                        <div className="spec-item" style={{
+                            display: 'flex',
+                            borderBottom: '1px solid #eee',
+                            padding: '15px 0'
+                        }}>
+                            <span style={{width: '150px', color: '#666'}}>Bộ sưu tập</span>
+                            <span style={{flex: 1}}>: {product.bo_suu_tap || 'TRUE SQUARE'}</span>
+                        </div>
+                        <div className="spec-item" style={{
+                            display: 'flex',
+                            borderBottom: '1px solid #eee',
+                            padding: '15px 0'
+                        }}>
+                            <span style={{width: '150px', color: '#666'}}>Mã sản phẩm</span>
+                            <span style={{flex: 1}}>: {product.ma_san_pham}</span>
+                        </div>
+                        
+                        <div className="spec-item" style={{
+                            display: 'flex',
+                            borderBottom: '1px solid #eee',
+                            padding: '15px 0'
+                        }}>
+                            <span style={{width: '150px', color: '#666'}}>Giới tính</span>
+                            <span style={{flex: 1}}>: {product.nam_nu || 'Unisex'}</span>
+                        </div>
+                        <div className="spec-item" style={{
+                            display: 'flex',
+                            borderBottom: '1px solid #eee',
+                            padding: '15px 0'
+                        }}>
+                            <span style={{width: '150px', color: '#666'}}>Loại máy</span>
+                            <span style={{flex: 1}}>: {product.loai_may || 'Automatic'}</span>
+                        </div>
+
+                        <div className="spec-item" style={{
+                            display: 'flex',
+                            borderBottom: '1px solid #eee',
+                            padding: '15px 0'
+                        }}>
+                            <span style={{width: '150px', color: '#666'}}>Đường kính</span>
+                            <span style={{flex: 1}}>: {product.size_mat_so || '38mm'}</span>
+                        </div>
+                        <div className="spec-item" style={{
+                            display: 'flex',
+                            borderBottom: '1px solid #eee',
+                            padding: '15px 0'
+                        }}>
+                            <span style={{width: '150px', color: '#666'}}>Màu sắc</span>
+                            <span style={{flex: 1}}>: {product.mau_sac || 'Xanh'}</span>
+                        </div>
+
+                        <div className="spec-item" style={{
+                            display: 'flex',
+                            borderBottom: '1px solid #eee',
+                            padding: '15px 0'
+                        }}>
+                            <span style={{width: '150px', color: '#666'}}>Phong cách</span>
+                            <span style={{flex: 1}}>: {product.phong_cach || 'Fashion'}</span>
+                        </div>
+                        <div className="spec-item" style={{
+                            display: 'flex',
+                            borderBottom: '1px solid #eee',
+                            padding: '15px 0'
+                        }}>
+                            <span style={{width: '150px', color: '#666'}}>Chất liệu dây</span>
+                            <span style={{flex: 1}}>: {product.loai_day || 'Dây Đá Ceramic'}</span>
+                        </div>
+
+                        <div className="spec-item" style={{
+                            display: 'flex',
+                            borderBottom: '1px solid #eee',
+                            padding: '15px 0'
+                        }}>
+                            <span style={{width: '150px', color: '#666'}}>Tính năng</span>
+                            <span style={{flex: 1}}>: {product.tinh_nang || 'Time'}</span>
+                        </div>
+                        <div className="spec-item" style={{
+                            display: 'flex',
+                            borderBottom: '1px solid #eee',
+                            padding: '15px 0'
+                        }}>
+                            <span style={{width: '150px', color: '#666'}}>Độ chịu nước</span>
+                            <span style={{flex: 1}}>: {product.chong_nuoc || '5 ATM'}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             {/* Phần đánh giá sản phẩm */}

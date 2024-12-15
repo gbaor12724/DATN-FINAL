@@ -7,7 +7,7 @@ import './asests/css/Header.css'; // Đảm bảo đường dẫn đúng với t
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';  // Đảm bảo bạn đã import CSS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faPhone, faUser, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faPhone, faUser, faHeart, faSignOutAlt, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { Link } from 'react-router-dom';
 const Header = () => {
@@ -59,10 +59,10 @@ const Header = () => {
                     placeholder="Tìm kiếm"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    style={{ 
-                        flex: 1, 
-                        padding: '8px', 
-                        borderRadius: '5px', 
+                    style={{
+                        flex: 1,
+                        padding: '8px',
+                        borderRadius: '5px',
                         border: '1px solid #ccc',
                         fontSize: '0.9rem',
                         width: '200px'
@@ -93,16 +93,16 @@ const Header = () => {
             <nav className="navbar navbar-expand-md navbar-light bg-light sticky-top">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">
-                        <img 
-                            src={logo} 
-                            style={{ 
+                        <img
+                            src={logo}
+                            style={{
                                 marginLeft: '50px',
                                 width: '350px',      // Tăng width
                                 height: 'auto',      // Để height tự động điều chỉnh
                                 objectFit: 'contain',
                                 display: 'block'     // Đảm bảo hiển thị đúng
-                            }} 
-                            alt="Logo" 
+                            }}
+                            alt="Logo"
                         />
                     </a>
 
@@ -153,22 +153,6 @@ const Header = () => {
                             </li>
 
 
-                            {isLoggedIn ? (
-                                <li className="nav-item">
-                                    <button
-                                        className="btn btn-outline-danger nav-link"
-                                        onClick={handleLogout}
-                                    >
-                                        Đăng Xuất
-                                    </button>
-                                </li>
-                            ) : (
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/login">
-                                        Đăng Nhập
-                                    </a>
-                                </li>
-                            )}
                             <li className="nav-item">
                                 <div className="nav-icon-container">
                                     <Link className="nav-link" to="/favorites">
@@ -199,6 +183,30 @@ const Header = () => {
                                     )}
                                 </button>
                             </li>
+
+                            {isLoggedIn ? (
+                                <li className="nav-item">
+                                    <div className="nav-icon-container">
+                                        <button
+                                            onClick={handleLogout}
+                                            className="nav-link"
+                                            style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+                                        >
+                                            <FontAwesomeIcon icon={faSignOutAlt} />
+                                            <span className="nav-icon-text">Đăng xuất</span>
+                                        </button>
+                                    </div>
+                                </li>
+                            ) : (
+                                <li className="nav-item">
+                                    <div className="nav-icon-container">
+                                        <Link className="nav-link" to="/login">
+                                            <FontAwesomeIcon icon={faSignInAlt} />
+                                            <span className="nav-icon-text">Đăng nhập</span>
+                                        </Link>
+                                    </div>
+                                </li>
+                            )}
                         </ul>
                     </div>
                 </div>
